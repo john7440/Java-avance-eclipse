@@ -106,6 +106,26 @@ public class ArticleDao {
 	            statement.executeUpdate();
 	        }
 	    }
+	    
+	    //affichage des articles au propre
+	    public void displayAll() throws SQLException {
+	        List<Article> articles = findAll();
+	        
+	        System.out.println("===============================================================================");
+	        System.out.printf("| %-5s | %-30s | %-20s | %-10s |%n", "ID", "Description", "Brand", "Price");
+	        System.out.println("===============================================================================");
+	        
+	        for (Article article : articles) {
+	            System.out.printf("| %-5d | %-30s | %-20s | %10.2f€ |%n",
+	                article.getId(),
+	                article.getDescription(),
+	                article.getBrand(),
+	                article.getPrice()
+	            );
+	        }
+	        
+	        System.out.println("==============================================================================");
+	    }
 	
 }
 

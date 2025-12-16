@@ -9,19 +9,23 @@ public class TestDao {
         
         try {
         	// create
-        	Article newArticle = new Article (0,"Laptop", "DELL", 899.99);
-        	dao.create(newArticle);
+        	//Article newArticle = new Article (0,"Laptop", "DELL", 899.99);
+        	//dao.create(newArticle);
         	
         	//read all
-        	List<Article> articles = dao.findAll();
-            articles.forEach(a -> System.out.println(a.getId() + " - " + a.getDescription()));
+        	//List<Article> articles = dao.findAll();
+           //articles.forEach(a -> System.out.println(a.getId() + " - " + a.getDescription()));
             
             //update
-            newArticle.setPrice(799.99);
-            dao.update(newArticle);
+            //newArticle.setPrice(799.99);
+            //dao.update(newArticle);
             
             //delete
-            dao.delete(newArticle.getId());
+            //dao.delete(newArticle.getId());
+            
+            //affichage
+            dao.displayAll();
+            
         } catch (SQLException e) {
         	e.printStackTrace();
         }
